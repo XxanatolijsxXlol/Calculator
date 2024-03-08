@@ -1,0 +1,344 @@
+/* Add the following line at the beginning of your CSS file to import the font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Then, apply the font to all text elements */
+body, input, label, button, select, option {
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #383838; /* Change label color */
+    text-align: center; /* Center the labels */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black; /* Change border thickness */
+    text-align: center;
+    font-size: 14px;
+}
+
+th,
+td {
+    max-width: 20px;
+    word-wrap: break-word;
+    cursor: pointer; /* Add cursor pointer for the cells */
+}
+
+td.editable {
+    background-color: #f0f0f0; /* Highlight editable cells */
+}
+
+body {
+    background: rgb(255, 255, 255);
+    background-color: #c9c9c944;
+}
+
+input[type="number"],
+select {
+    width: calc(100% - 24px); /* Adjust input width */
+    padding: 10px; /* Add padding to inputs */
+    margin-bottom: 15px; /* Add spacing between inputs */
+    border: none; /* Remove border from inputs */
+    border-bottom: 1px solid #000000; /* Add bottom border to inputs */
+    border-radius: 0; /* Remove border radius */
+    box-sizing: border-box; /* Ensure input width includes padding and border */
+}
+
+input:focus {
+    outline: none;
+}
+
+.flex-container {
+    display: flex;
+}
+
+#exportButton {
+    margin-top: 50px;
+    color: #fff;
+    background-color: #3bb502;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#exportButton:hover {
+    background-color: #398e02; /* Darker shade on hover for better feedback */
+}
+
+.toggle {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    border: none;
+    color: white;
+    background-color: #41c404;
+    border-radius: 15px;
+    width: 172px;
+    height: 35px;
+    transition: background-color 0.3s ease;
+}
+.toggle:hover{
+    background-color: #47ac04;
+}
+.inputbox {
+    background-color: #fafafa;
+    width: 20%;
+    height: 50%; /* Adjust the height as needed, 50% of the viewport height */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.233);
+    margin: 50px auto;
+    background-color: none;
+    position: relative;
+}
+
+.inputbox input[type="number"]{
+    height: 4vh;
+}
+
+.inputbox input{
+    background: transparent;
+}
+h3{
+    font-size: 2vh;
+}
+.materialinputbox {
+    display: none; /* Initially hide the material input box */
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    padding: 20px;
+    position:relative; /* Position the table absolutely */ /* Adjust top position as needed */
+    right: 200px; /* Adjust right position as needed */
+}
+
+.materialinputbox input {
+    width: 90px;
+}
+
+
+
+
+
+.btn {
+    border: none;
+    color: white;
+    background-color: crimson;
+    border-radius: 15px;
+    width: 172px;
+    height: 35px;
+    transition: background-color 0.2s ease;
+    display: block; /* Change button display property to block */
+    margin:  auto; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: rgba(146, 27, 51, 0.89);
+    color: white;
+}
+
+.matbtn {
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background-color: crimson;
+    border-radius: 15px;
+    width: 172px;
+    height: 35px;
+    transition: background-color 0.3s ease;
+}
+
+.rembtn {
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background-color: crimson;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    transition: background-color 0.3s ease;
+}
+
+#inputTable {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#inputTable th,
+#inputTable td {
+    font-size: 1.7vh;
+    padding: 8px;
+    border: 1px solid black; /* Change border thickness */
+    text-align: center;
+    
+}
+
+#inputTable th {
+    background-color: #f0f0f0;
+}
+
+#inputTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#inputTable td.editable {
+    background-color: #f4f0f0;
+    cursor: pointer;
+}
+
+.materialinputbox table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Existing CSS */
+
+.materialinputbox {
+    display: none;
+    background-color: white;
+    width: 600px;
+     /* Change height to auto to accommodate variable content */
+    border-radius: 15px;
+    margin-top: 9vh;
+    padding: 20px;
+    position: relative;
+    right: 200px;
+    animation: fadeInDown 1s ease forwards; /* Updated animation */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(-20px); /* Move up initially */
+    }
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move down to the original position */
+    }
+}
+
+.materialinputbox table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    position: relative;
+}
+
+.materialinputbox th,
+.materialinputbox td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Rest of the CSS */
+
+
+.materialinputbox th {
+    background-color: #f0f0f0;
+}
+
+.materialinputbox tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.materialinputbox td input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: auto; /* Add this line to center vertically */
+}
+
+
+.materialinputbox .matbtn {
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background-color: crimson;
+    border-radius: 15px;
+    width: 172px;
+    height: 35px;
+    transition: background-color 0.3s ease;
+}
+
+.materialinputbox .matbtn:hover {
+    background-color: rgba(146, 27, 51, 0.89); /* Darker shade on hover */
+}
+
+.materialinputbox .rembtn {
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background-color: crimson;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    transition: background-color 0.3s ease;
+}
+
+.materialinputbox .rembtn:hover {
+    background-color: rgba(146, 27, 51, 0.89);/* Darker shade on hover */
+}
+.highlighted-label{
+color: red;
+}
+
+/* Add a transition effect for smooth color change */
+label {
+    transition: color 0.3s ease;
+}
+
+.materialinputbox {
+    animation: moveToLeft 1s ease forwards; /* Apply animation */
+}
+
+@keyframes moveToLeft {
+    from {
+        transform: translateX(60vh);
+    }
+    to {
+        transform: translateX(0); /* Adjust as needed */
+    }
+}
+.inputbox.moveToLeft {
+    animation: moveFormToLeft 1s ease forwards;
+}
+
+@keyframes moveFormToLeft {
+    from {
+        transform: translateX(43vh);
+    }
+    to {
+        transform: translateX(-15vh); /* Adjust as needed */
+    }
+}
+@keyframes moveCenter {
+    from {
+        transform: translateX(-48vh); /* Start from the left */
+    }
+    to {
+        transform: translateX(0); /* Move back to the center */
+    }
+}
+
+.moveCenter {
+    animation: moveCenter 1s forwards;
+}
+

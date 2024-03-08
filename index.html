@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiālu cenu tabula</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="table2excel.js"></script>
+</head>
+
+<body>
+
+    <form id="calculatorForm">
+        <div class="flex-container">
+            <div class="inputbox">
+                <label for="material">Materiāli:</label>
+                <select id="material" required>
+                    <!-- Options will be dynamically added here -->
+                </select>
+            
+                <label for="length">Garums (mm):</label>
+                <input type="number" id="length" required>
+            
+                <label for="width">Platums (mm):</label>
+                <input type="number" id="width" required>
+            
+                <label for="thickness">Biezums (mm):</label>
+                <input type="number" id="thickness" required>
+            
+                <label for="Koeficent">Koeficents:</label>
+                <input type="number" id="Koeficent" required>
+            
+                <label for="count">Skaits:</label>
+                <input type="number" id="count" required>
+            
+                <label for="cuttingTime">Griešanas laiks (min):</label>
+                <input type="number" id="cuttingTime" required>
+            
+                <label for="drawingprice">Rasēšanas cena:</label>
+                <input type="number" id="drawingprice" required>
+            
+                <button type="button" class="btn" onclick="calculate()">Aprēķināt</button>
+            </div>
+            
+            <button type="button" class="toggle" id="showMaterialInputBox">Ievadīt materiālu cenu</button>
+
+            <div style="display: none;" id="materialInputBox" class="materialinputbox">
+                <h3>Rediģēt materiālu cenas</h3>
+                <table id="editableMaterialPriceTable">
+                    <thead>
+                        <tr>
+                            <th>Materiāla nosaukums</th>
+                            <th>Materiāla cena</th>
+                            <th>Darbība</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <button type="button" class="matbtn" onclick="addMaterialRow()">Pievienot materiālu</button>
+                                <button type="button" class="matbtn" onclick="saveMaterialPrices()">Saglabāt</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </form>
+
+    <table id="inputTable">
+        <tr>
+            <th>Materiāls</th>
+            <th>Garums(mm)</th>
+            <th>Platums(mm)</th>
+            <th>Biezums(mm)</th>
+            <th>Svars</th>
+            <th>Laukums</th>
+            <th>Skaits</th>
+            <th>Materiāla griešana</th>
+            <th>Griešanas laiks (min)</th>
+
+            <th>Rasēšanas cena</th>
+            <th>Griešanas izmaksas</th>
+            <th>Materiāla izmaksas</th>
+            <th>Cena bez pvn</th>
+            <th>Cena ar pvn</th>
+
+            <th>Darbība</th> <!-- Add column for Remove button -->
+        </tr>
+        <tr id="valueRow"></tr>
+        <tr id="totalRow"></tr>
+    </table>
+    <button id="exportButton">Eksportēt uz Excel</button>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
