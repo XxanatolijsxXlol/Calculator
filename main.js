@@ -1,7 +1,7 @@
 document.getElementById('showMaterialInputBox').addEventListener('click', function () {
     const materialInputBox = document.getElementById('materialInputBox');
     const form = document.querySelector('.inputbox');
-
+//nigga
     // Toggle display of material input box
     if (materialInputBox.style.display === 'none') {
         materialInputBox.style.display = 'block';
